@@ -1,0 +1,32 @@
+<!-- An execution context is like a container that holds information about variables, functions, and scope while the code is running. It helps JavaScript keep track of things and know what's going on.
+Imagine it as a box that holds all the important stuff for a specific part of the code. Inside this box, there's a list of variables and functions. It's like a storage space for them.
+The execution context also has a chain of other boxes connected to it. This chain helps JavaScript find variables or functions that are not directly in the current box.
+Lastly, the execution context knows what object the code is currently working with. It's like the main object for the code.
+Overall, the execution context helps JavaScript organize and manage the code, making sure everything works smoothly. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var x = 10;
+
+      function outer() {
+        var y = 20;
+
+        function inner() {
+          var z = 30;
+          console.log(x + y + z);
+        }
+
+        inner();
+      }
+
+      outer();
+    </script>
+  </body>
+</html>
